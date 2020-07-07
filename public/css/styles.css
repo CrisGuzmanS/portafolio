@@ -1,0 +1,243 @@
+@font-face{
+    src: url(../fonts/JosefinSans-Light.ttf);
+    font-family: Josefin;
+}
+
+@font-face{
+    src: url(../fonts/Nunito-Regular.ttf);
+    font-family: Nunito;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+}
+
+body{
+    font-family: Nunito;
+    font-size: large;
+    background: #F5F5F5;
+}
+
+hr{
+    color: white;
+}
+
+.subtitle{
+    border: 1px solid #60149e;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    color: #60149e;
+}
+
+/*
+    ======
+    SOCIAL
+    ======
+*/
+
+#social{
+    background: #F5F5F5;
+}
+
+#social ul li a{
+    color: #404040;
+    margin-right: 0.5em;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+#social ul li a:hover{
+    color: #6515a3;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+
+/*
+    ======
+    HEADER
+    ======
+*/
+
+header{
+    background-image: linear-gradient(135deg, #1c075a, #6515a3);
+    padding: 1em 0;
+}
+
+#nombre{
+    text-align: center;
+    font-size: 3em;
+    font-family: Josefin;
+    color: white;
+    border-bottom: 1px solid #704894;
+}
+
+#descripcion{
+    text-align: center;
+    font-size: 20px;
+    font-family: Nunito;
+    color: white;
+}
+
+/*
+    ==================
+    MENÚ DE NAVEGACIÓN
+    ==================
+*/
+
+#menu{
+    margin-bottom: 1em;
+    background: #1c075a !important;
+}
+
+#menu a{
+    color: white !important;
+}
+
+#menu-boton{
+    color: white;
+}
+
+/*
+    ======
+    VIDEOS
+    ======
+*/
+
+.wrapper{
+    width: 700px;
+    margin: auto;
+}
+
+video{
+    width: 100%;
+}
+
+.pruebas{
+    background-image: linear-gradient(red, blue);
+}
+
+/*
+    ======
+    FOOTER
+    ======
+*/
+
+footer{
+    padding: 1em 0;
+    margin-top: 1em;
+    background: #333333;
+}
+
+#footer-social div{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Nunito;
+}
+
+#copyright{
+    color: white;
+    text-align: center;
+}
+
+/*
+    ====
+    TEXT
+    ====
+*/
+
+.text-purple{
+    color: #800dc2;
+}
+
+.text-josefin{
+    font-family: Josefin;
+}
+
+/*
+    ========
+    IMAGENES
+    ========
+*/
+
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 0.5s ease;
+}
+
+.inner:hover img{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+#foto-personal{
+    max-width: 200px;
+    border-radius: 20%;
+    border: 10px solid rgb(224, 224, 224);
+}
+
+/* 
+    =======
+    BOTONES
+    =======
+*/
+
+.btn-black{
+    background-color: #313131 !important;
+}
+
+.btn-black:hover{
+    background-color: #1a1a1a !important;
+}
+
+/*
+    ===========
+    HABILIDADES
+    ===========
+*/
+
+.habilidad{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    transition: 0.3s;
+}
+
+.habilidad:hover{
+    background: black !important;
+}
+
+.habilidad span{
+    text-align: center;
+    color: white;
+    font-family: Josefin;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#html{background: #f16524}
+#css{background: #00a0e4}
+#javascript{background: #f7bc18}
+#php{background: #787cb4}
+#python{background: #3775a9}
+#bootstrap{background: #69419d}
+#express{background: #363636}
+#cpanel{background: #dc3135}
+#nodejs{background: #8cc03d}
+#ajax{background: #09719f}
+#mongodb{background: #459c45}
+#mysql{background: #e58f00}
+#oracle{background: #f20101}
+#linux{background: #0175c3}
+#laravel{background: #ff2d20;}
+#git{background: #313131;}
+#docker{background: #099cec;}

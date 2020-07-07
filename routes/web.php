@@ -13,6 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
+
+/**
+ * ========
+ * PROJECTS
+ * ========
+ */
+
+Route::get('proyecto/{project}', 'ProjectController@show')->name('projects.show');
+
+/**
+ * ========
+ * ABOUT ME
+ * ========
+ */
+
+Route::get('sobre-mi', 'AboutController@show')->name('about.show');
+
+/**
+ * ========
+ * CONTACT
+ * ========
+ */
+
+Route::get('contacto', 'ContactController@show')->name('contact.show');

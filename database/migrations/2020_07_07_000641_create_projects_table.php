@@ -19,8 +19,8 @@ class CreateProjectsTable extends Migration
             $table->text('description');
             $table->string('path_cover_page');
             $table->string('path_video');
-            $table->string('link');
-            $table->date('date');
+            $table->string('link')->nullable();
+            $table->string('date');
             $table->timestamps();
         });
     }
