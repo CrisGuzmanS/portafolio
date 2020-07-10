@@ -55,7 +55,7 @@
                             <span class="text-success mr-2">
                                 {!! $feature->icon !!}
                             </span>
-                            {!! nl2br(e($feature->description)) !!}
+                            {!! $feature->description !!}
                         </li>
                         @endforeach
                     </ul>

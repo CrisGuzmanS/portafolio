@@ -13,9 +13,25 @@ class ProjectsSeeder extends Seeder
      */
     public function run()
     {
+
+        // ==========================
+        // ZAPATA CAMIONES AEROPUERTO
+        // ==========================
+
         $project = Project::create([
             'name' => 'E-commerce para Refaccionaria Zapata Camiones Aeropuerto',
-            'description' => 'Participé en la implementación del sistema E-commerce de venta de autopartes para Zapata Camiones S.A de C.V. sucursal Aeropuerto; Además, implementé un sistema de control administrativo para clientes, productos, y ventas.',
+            'description' =>
+            'Zapata Camiones S.A. de C.V. es una empresa dedicada a la venta de autopartes. Requerían 
+                un sistema E-commerce que permitiera vender en la web sus productos. Las tareas a 
+                mi cargo fue el diseño e implementación del proceso de pago, desde la selección de los productos, 
+                hasta la realización de la compra. 
+                
+                Así mismo, implementé el sistema administrativo que permite tener el control de los productos,
+                las promociones, el seguimiento de las compras, envío de correos con el CFDI, reportes diarios de 
+                ventas, y la creación de diferentes perfiles para el control de acceso al sistema.',
+            // 'Participé en la implementación del sistema E-commerce de venta de autopartes 
+            // para Zapata Camiones S.A de C.V. sucursal Aeropuerto; Además, implementé un 
+            // sistema de control administrativo para clientes, productos, y ventas.',
             'path_cover_page' => 'img/cover_pages/portada_refaccionaria_zapata_camiones.jpg',
             'path_video' => 'videos/video_demostrativo_zapata_camiones.mp4',
             'link' => 'https://www.refaccionariazapata.com/',
@@ -30,9 +46,42 @@ class ProjectsSeeder extends Seeder
             Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
         ]);
 
+        // =============
+        // JUEGO AVIONES
+        // =============
+
+        $project = Project::create([
+            'name' => 'Juego de aviones',
+            'description' =>
+            'Es un juego sencillo que consite en disparar a naves extraterrestres 
+                para evitar que estas puedan invadir el planeta tierra. Las tecnologías 
+                empleadas para este proyecto fueron HTML, CSS, Javascript, así como jquery.',
+            'path_cover_page' => 'img/cover_pages/portada_juego_aviones.png',
+            'path_video' => 'videos/video_demostrativo_juego_aviones.mp4',
+            'date' => 'diciembre 2018'
+        ]);
+
+        $project->features()->attach([
+            Feature::where('description', 'Animación digital')->first()->id,
+        ]);
+
+        // =====
+        // ARBYS
+        // =====
+
         $project = Project::create([
             'name' => 'ERP para Arbys',
-            'description' => 'Participé en el desarrollo de un sistema ERP (Entrepise Resource Planning) y CRM (Cutomer Relationship Management) para la administración de Arbys.',
+            'description' =>
+            'Arbys es una empresa dedicada a la venta de motos y autos. Ellos requerían un 
+                sistema que ERP (Entreprise Resource Planning) y CRM (Customer Relationship Management).
+                
+                En este proyecto implementé un módulo que permitiera subir archivos excel periódicamente 
+                sobre los productos que necesitan, y tener una lista de clientes, quienes pueden cotizar y 
+                comprar dichos productos, los cuales, se envían en formato PDF personalizado a sus correos.
+                
+                Todo esto es realizado por los empleados que pueden encontrarse en diferentes sucursales.',
+            // 'Participé en el desarrollo de un sistema ERP (Entrepise Resource Planning) y 
+            // CRM (Cutomer Relationship Management) para la administración de Arbys.',
             'path_cover_page' => 'img/cover_pages/portada_arbys.jpg',
             'path_video' => 'videos/video_demostrativo_arbys.mp4',
             'link' => 'http://siaa.planarbys.com',
@@ -45,6 +94,30 @@ class ProjectsSeeder extends Seeder
             Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
             Feature::where('description', 'Creación de PDF')->first()->id,
         ]);
+
+        // =========
+        // TO-DO APP
+        // =========
+
+        $project = Project::create([
+            'name' => 'To-do App',
+            'description' =>
+            'Implementé un administrador de tareas que consite en dos pestañas, la primera 
+            se encarga de mostrar las tareas pendientes y la segunda pestaña las tareas terminadas. 
+                Estas pueden ser editadas o incluso, eliminadas. Las tecnologías que utilicé fueron 
+                Ionic 3 y Angular 7.',
+            'path_cover_page' => 'img/cover_pages/portada_to_do_app.png',
+            'path_video' => 'videos/video_demostrativo_to_do_app.mp4',
+            'date' => 'mayo del 2019'
+        ]);
+
+        $project->features()->attach([
+            Feature::where('description', 'Animación digital')->first()->id,
+        ]);
+
+        // ===========
+        // MATERIAL UC
+        // ===========
 
         $project = Project::create([
             'name' => 'Material UC',
@@ -69,41 +142,14 @@ class ProjectsSeeder extends Seeder
             Feature::where('description', 'Escanéo QR')->first()->id,
         ]);
 
-        $project = Project::create([
-            'name' => 'To-do App',
-            'description' =>
-            'Implementé un administrador de tareas que consite en dos pestañas, la primera 
-            se encarga de mostrar las tareas pendientes y la segunda pestaña las tareas terminadas. 
-                Estas pueden ser editadas o incluso, eliminadas. Las tecnologías que utilicé fueron 
-                Ionic 3 y Angular 7.',
-            'path_cover_page' => 'img/cover_pages/portada_to_do_app.png',
-            'path_video' => 'videos/video_demostrativo_to_do_app.mp4',
-            'date' => 'mayo del 2019'
-        ]);
-
-        $project->features()->attach([
-            Feature::where('description', 'Animación digital')->first()->id,
-        ]);
-
-        $project = Project::create([
-            'name' => 'Juego de aviones',
-            'description' => 
-                'Es un juego sencillo que consite en disparar a naves extraterrestres 
-                para evitar que estas puedan invadir el planeta tierra. Las tecnologías 
-                empleadas para este proyecto fueron HTML, CSS, Javascript, así como jquery.',
-            'path_cover_page' => 'img/cover_pages/portada_juego_aviones.png',
-            'path_video' => 'videos/video_demostrativo_juego_aviones.mp4',
-            'date' => 'diciembre 2018'
-        ]);
-
-        $project->features()->attach([
-            Feature::where('description', 'Animación digital')->first()->id,
-        ]);
+        // ================
+        // TO-DO APP (MERN)
+        // ================
 
         $project = Project::create([
             'name' => 'To-Do MERN',
-            'description' => 
-                'Aplicación MERN FULL Stack (MongoDB, Express, React.js y NodeJs). 
+            'description' =>
+            'Aplicación MERN FULL Stack (MongoDB, Express, React.js y NodeJs). 
                 Se encarga de realizar la administración de tareas pendientes que 
                 tenga el usuario mediante operaciones CRUD (create, read, update y delete) 
                 a la base de datos haciendo uso de peticiones HTTP al servidor.',

@@ -7,7 +7,11 @@
         =========
     -->
     <div class="container">
-        <div class="card-columns">
+        <div class="card-columns" 
+            data-aos="fade-up" 
+            data-aos-delay="50" 
+            data-aos-anchor=".greeting"
+            data-aos-duration="1500">
 
             <!--
                 ===================================
@@ -16,7 +20,7 @@
             -->
 
             @foreach ($projects as $project)
-                <div class="card mt-4 shadow mb-5 bg-white rounded" data-aos="fade-up" data-aos-delay="50" data-aos-anchor=".greeting">
+                <div class="card mt-4 shadow mb-5 bg-white rounded">
                     <div class="inner">
                         <img src="{{ asset($project->path_cover_page) }}"
                             alt="{{$project->name}}" class="card-img-top">

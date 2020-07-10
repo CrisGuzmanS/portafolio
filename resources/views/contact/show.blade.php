@@ -5,10 +5,10 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-lg-8">
             <div class="card mt-4 shadow-sm rounded-0" data-aos="fade-right" data-aos-delay="50" data-aos-anchor=".greeting">
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="{{route('contact.send')}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="text-uppercase text-primary">Nombre</label>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-lg-4">
 
             <div class="row">
                 {{-- PHONE --}}

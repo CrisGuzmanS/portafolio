@@ -28,11 +28,11 @@
     <nav class="navbar navbar-expand container-fluid"  id="social">
         <div class="container">
             <ul class="navbar-nav">
-                <li class="nav-item" data-aos="fade-right" data-aos-delay="110">
+                <li class="nav-item" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">
                     <a href="mailto:cristian.guzman.contacto@gmail.com" target="_blank"><i
                             class="fas fa-envelope"></i></a>
                 </li>
-                <li class="nav-item" data-aos="fade-right" data-aos-delay="100">
+                <li class="nav-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="900">
                     <a href="https://github.com/CrisGuzmanS/" target="_blank"><i class="fab fa-github-square"></i></a>
                 </li>
             </ul>
