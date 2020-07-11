@@ -13,8 +13,14 @@ class ContactController extends Controller
     }
 
     public function send( Request $request ){
-        Mail::to('cristian.guzman.contacto@gmail.com')
-            ->queue(new ContactMail);
+        // dd( env('MAIL_HOST') );
+
+        $name = $request->name;
+        $mail = $request->mail;
+        $message = $request->message;
+
+        Mail::to( env('MAIL_FROM_ADDRESS') )
+            ->queue(new ContactMail($name, $mail, $message));
 
         return redirect()->back();
     }
