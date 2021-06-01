@@ -14,6 +14,58 @@ class ProjectsSeeder extends Seeder
     public function run()
     {
 
+        // ====
+        // DPYX
+        // ====
+
+        $project = Project::create([
+            'name' => 'Sistema de autoevaluación de repositorios de información académica y científica',
+            'description' =>
+            'dPyx es un sistema que ha sido instalado en alrededor de 5 instituciones, una de ellas a nivel nacional en Perú
+            (CONCYTEC) que cuenta con la inscripción de más de 80 repositorios.
+            
+            Debido a la seguridad que ofrece, la interfaz gráfica amigable y la usabilidad que presenta, ha sido requerido por
+            las instituciones para la autoevaluación de sus repositorios institucionales. Esta herramienta permite ofrecer un 
+            panorama más amplio de las áreas de oportunidad de los sitemas de dichas instituciones.',
+            'path_cover_page' => 'img/cover_pages/portada_dpyx.jpg',
+            'path_video' => 'videos/video_demostrativo_dpyx.mp4',
+            'link' => 'https://demo.dpyx.net/',
+            'date' => 'Junio del 2021',
+        ]);
+
+        $project->features()->attach([
+            Feature::where('description', 'Graficas adaptables')->first()->id,
+            Feature::where('description', 'Exportacion Excel')->first()->id,
+            Feature::where('description', 'Envío de correo')->first()->id,
+            Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
+            Feature::where('description', 'Interacción en tiempo real')->first()->id,
+        ]);
+
+        // ===========
+        // SOURCE-LINK
+        // ===========
+
+        $project = Project::create([
+            'name' => 'Sistema generador de estadisticas de DSpace',
+            'description' =>
+            'Source Link es una herramienta que permite obtener información en tiempo real de los
+            repositorios DSpace a partir de una API desarrollada con python (usando el framework FLASK).
+            Una vez que obtiene información de valor como vistas y descargas, esta es agrupada por país, item,
+            comunidad y autor, para identificar cuales son las publicaciones más destacadas que ha tenido el repositorio
+            institucional en cuestión.',
+            'path_cover_page' => 'img/cover_pages/portada_source_link.jpg',
+            'path_video' => 'videos/video_demostrativo_source_link.mp4',
+            'link' => 'http://34.235.253.220/',
+            'date' => 'Mayo del 2021',
+        ]);
+
+        $project->features()->attach([
+            Feature::where('description', 'Graficas')->first()->id,
+            Feature::where('description', 'Exportacion Excel')->first()->id,
+            Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
+            Feature::where('description', 'Interacción en tiempo real')->first()->id,
+        ]);
+
         // ==========================
         // ZAPATA CAMIONES AEROPUERTO
         // ==========================
@@ -29,9 +81,6 @@ class ProjectsSeeder extends Seeder
                 Así mismo, implementé el sistema administrativo que permite tener el control de los productos,
                 las promociones, el seguimiento de las compras, envío de correos con el CFDI, reportes diarios de 
                 ventas, y la creación de diferentes perfiles para el control de acceso al sistema.',
-            // 'Participé en la implementación del sistema E-commerce de venta de autopartes 
-            // para Zapata Camiones S.A de C.V. sucursal Aeropuerto; Además, implementé un 
-            // sistema de control administrativo para clientes, productos, y ventas.',
             'path_cover_page' => 'img/cover_pages/portada_refaccionaria_zapata_camiones.jpg',
             'path_video' => 'videos/video_demostrativo_zapata_camiones.mp4',
             'link' => 'https://www.refaccionariazapata.com/',
