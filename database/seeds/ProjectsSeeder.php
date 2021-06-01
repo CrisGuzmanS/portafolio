@@ -34,11 +34,11 @@ class ProjectsSeeder extends Seeder
         ]);
 
         $project->features()->attach([
-            Feature::where('description', 'Graficas adaptables')->first()->id,
-            Feature::where('description', 'Exportacion Excel')->first()->id,
+            Feature::where('description', 'Gráficas (de reportes)')->first()->id,
+            Feature::where('description', 'Importacion / Exportacion Excel')->first()->id,
             Feature::where('description', 'Envío de correo')->first()->id,
             Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
-            Feature::where('description', 'Interacción en tiempo real')->first()->id,
+            Feature::where('description', 'Almacenamiento en tiempo real')->first()->id,
         ]);
 
         // ===========
@@ -60,10 +60,10 @@ class ProjectsSeeder extends Seeder
         ]);
 
         $project->features()->attach([
-            Feature::where('description', 'Graficas')->first()->id,
-            Feature::where('description', 'Exportacion Excel')->first()->id,
+            Feature::where('description', 'Gráficas (de reportes)')->first()->id,
+            Feature::where('description', 'Importacion / Exportacion Excel')->first()->id,
             Feature::where('description', 'Seguridad con perfiles de acceso')->first()->id,
-            Feature::where('description', 'Interacción en tiempo real')->first()->id,
+            Feature::where('description', 'Almacenamiento en tiempo real')->first()->id,
         ]);
 
         // ==========================
